@@ -1,0 +1,80 @@
+{{define "master"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Soundabout</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="/favicon.ico"> -->
+
+    <link href="/static/css/soundabout.css" rel="stylesheet">
+    <script src="/static/jquery/js/jquery-3.1.0.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {{template "extrahead" .}}
+</head>
+<body id="TODO: .page_id">
+
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Soundabout</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    {{ menulink "index" "/" "Voorpagina" }}
+                    {{ menulink "muziek" "/muziek_en_video" "Muziek + Video" }}
+                    {{ menulink "nieuws" "/nieuws" "Nieuws" }}
+                    {{ menulink "optredens" "/optredens" "Optredens" }}
+                    {{ menulink "fotos" "/fotos" "Foto's" }}
+                    {{ menulink "overons" "/overons" "Over ons" }}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{ menulink "boekingen" "/boekingen" "Boekingen" }}
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+{{template "content" .}}
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; The Soundabout. Deze website en alle daarin opgenomen muziek, video's en foto's van The Soundabout vallen onder de
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA</a> licensie, met
+            uitzondering van media gemaakt/geproduceerd door, of in eigendom van, derden.</p>
+      </div>
+    </footer>
+
+</div>
+<!-- /container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/bootstrap/js/bootstrap.min.js" async></script>
+</body>
+</html>
+{{ end }}
+
+{{- define "extrahead" -}}
+{{- end -}}

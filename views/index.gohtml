@@ -1,0 +1,99 @@
+{{define "content"}}
+<div class="jumbotron"></div>
+
+<div class="row">
+    <div class="col-md-4 overons">
+        <h2>Wie we zijn</h2>
+
+        <p>De Amsterdamse band The Soundabout geeft al ruim 8 jaar hun geheel eigen draai aan
+           het mengen van reggae, rap en ska. Eerst vooral simpele feestmuziek, maar met de
+           jaren steeds meer inhoud, zowel muzikaal als tekstueel.</p>
+
+        <p>Na twee jaar vol buitenlandse avonturen is The Soundabout weer terug! Om dat te
+            bewijzen hebben zij zich eind 2013 opgesloten in een studio op het Friese
+            platteland, om de essentie van The Soundabout vast te leggen. Op een plaat met de
+            passende titel ‘Nooit Genoeg’ geven zij in 6 nummers inzicht in wat er ondertussen
+            in de wereld gebeurt is. De crisis, politiek, de koffiemaatschappijen, ze nemen
+            iedereen de maat, inclusief zichzelf. Dat die maat ruim voorzien is van afterbeats,
+            vrolijke blazersloopjes en stampende baspartijen spreekt natuurlijk voor zich!</p>
+
+        <p>Festivals, jongerencentra, dorpsfeesten en andere podia: wees klaar voor The Soundabout!</p>
+        <p><strong>The Soundabout – dansbaar met diepgang</strong></p>
+
+        <p><a class="btn btn-default" href="/overons" role="button">Meer over de band &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Muziek + Video</h2>
+
+        <p>Onze muziek is te beluisteren &amp; te kopen via
+            <a href="//itunes.apple.com/nl/album/nooit-genoeg-ep/id854409405">iTunes</a>,
+            <a href="spotify:album:3eCokrLeCvaRtEuyDzkuLx">Spotify</a> en
+            <a href="http://music.soundabout.nl/">Bandcamp</a>.</p>
+
+        <p>Onze video's staan op <a href="//www.youtube.com/channel/UCucKNSHT69WQiRyWw2NBk5g/videos">Youtube</a>.
+            Dit is onze laatse clip, Mijn Schuld:</p>
+        <iframe width="290" height="162" src="//www.youtube.com/embed/je7auFp08zc" frameborder="0" allowfullscreen></iframe>
+
+        <p><a class="btn btn-default" href="/muziek_en_video" role="button">Meer muziek &amp; video &raquo;</a></p>
+
+        <hr>
+        <ul class="socials">
+            <li><a href="//itunes.apple.com/nl/album/nooit-genoeg-ep/id854409405"><img src="/static/img/social/itunes-icon.png" alt="iTunes" title="iTunes"></a></li>
+            <li><a href="spotify:album:3eCokrLeCvaRtEuyDzkuLx"><img src="/static/img/social/spotify.svg" alt="Spotify" title="Spotify"></a></li>
+            <li><a href="http://music.soundabout.nl/"><img src="/static/img/social/bandcamp-48x48.png" title="Bandcamp" alt="Bandcamp"></a></li>
+            <li><a href="//www.youtube.com/channel/UCucKNSHT69WQiRyWw2NBk5g/videos"><img src="/static/img/social/youtube.png" title="Youtube" alt="Youtube" height="32" width="32"></a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+        {% include "performance/future.inc.html" %}
+
+        <p><a class="btn btn-default" href="/optredens/" role="button">Meer optredens &raquo;</a></p>
+
+        <h2>Contact</h2>
+
+        <p>Voor alle muziek-gerelateerde zaken, zoals optredens, tickets, opnames, demo-cd's,
+            etc. mail ons op <a href="mailto:info@soundabout.nl.">info@soundabout.nl.</a>
+            of bel naar <a href="tel:+31640102587">06-40102587</a>.</p>
+
+        <p>Voor digitale zaken zoals deze website, mail naar
+            <a href="mailto:webmaster@soundabout.nl">webmaster@soundabout.nl</a></p>
+
+        <hr>
+        <ul class="socials">
+            <li><a href="//www.facebook.com/soundabout"><img src="/static/img/social/facebook-48x48.png" title="Facebook" alt="Facebook" height="32" width="32"></a></li>
+            <li><a href="//twitter.com/SoundaboutSKA"><img src="/static/img/social/twitter-48x48.png" title="Twitter" alt="Twitter" height="32" width="32"></a></li>
+            <li><a href="//ongekendtalent.nl/band/the-soundabout"><img src="/static/img/social/ongekendtalent-48x48.png" title="Ongekend Talent" alt="Ongekend Talent" height="32" width="32"></a></li>
+            <li><a href="//www.last.fm/music/The+Soundabout"><img src="/static/img/social/lastfm-48x48.png" title="Last.fm" alt="Last.fm" height="32" width="32"></a></li>
+        </ul>
+    </div>
+</div>
+{{/*<div class="row">
+    <div class="col-md-12">
+        <h2>Andere dingetjes</h2>
+        <p>Hier vind je wat links naar pagina's die we wel willen hebben, maar die
+        geen plek hebben gekregen in ons mooie menu bovenaan alle pagina's.</p>
+    </div>
+</div>*/}}
+<div class="row anderedingetjes">
+    <div class="col-md-4"><div class="blokje">
+        <h3>Teksten</h3>
+        <p>Zanger niet verstaan? Of gewoon nieuwsgierig? Zoek het hier op.</p>
+        <p><a class="btn btn-default" href="{% url 'lyrics' %}" role="button">Teksten &raquo;</a></p>
+    </div></div>
+
+    <div class="col-md-4"><div class="blokje">
+        <h3>Nieuwsbrief</h3>
+        <p>We hebben een nieuwsbrief, ookwel bekend als mailing list. Af en toe sturen we
+        eens wat rond.</p>
+        <p><a class="btn btn-default" href="{% url 'mailing.subscribe' %}" role="button">Aanmelden voor de nieuwsbrief &raquo;</a></p>
+    </div></div>
+
+    <div class="col-md-4"><div class="blokje">
+        <h3>Links</h3>
+        <p>Links naar andere bezigheden van onze bandleden, vrienden, etc.</p>
+        <p><a class="btn btn-default" href="/links" role="button">Links &raquo;</a></p>
+    </div></div>
+</div>
+{{end}}
