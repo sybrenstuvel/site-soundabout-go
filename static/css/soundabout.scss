@@ -1,0 +1,385 @@
+@import 'bootstrap';
+
+@font-face {
+    font-family: 'Soundabout';
+    src: url('/static/fonts/soundabout.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$bg_grad1: #b4ddb4;
+$bg_grad2: #83c783;
+$bg_grad3: #52b152;
+$bg_grad4: #008a00;
+$bg_grad5: #005700;
+$bg_grad6: #002400;
+$text_colour: #f0f0f0;
+$admintool_text_colour: #c8ff57;
+
+html {
+    /*background-color: #1e1e1e;*/
+    background: $bg_grad1; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, $bg_grad1 0%, $bg_grad2 17%, $bg_grad3 33%, $bg_grad4 67%, $bg_grad5 83%, $bg_grad6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$bg_grad1), color-stop(17%,$bg_grad2), color-stop(33%,$bg_grad3), color-stop(67%,$bg_grad4), color-stop(83%,$bg_grad5), color-stop(100%,$bg_grad6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, $bg_grad1 0%,$bg_grad2 17%,$bg_grad3 33%,$bg_grad4 67%,$bg_grad5 83%,$bg_grad6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, $bg_grad1 0%,$bg_grad2 17%,$bg_grad3 33%,$bg_grad4 67%,$bg_grad5 83%,$bg_grad6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, $bg_grad1 0%,$bg_grad2 17%,$bg_grad3 33%,$bg_grad4 67%,$bg_grad5 83%,$bg_grad6 100%); /* IE10+ */
+    background: linear-gradient(135deg, $bg_grad1 0%,$bg_grad2 17%,$bg_grad3 33%,$bg_grad4 67%,$bg_grad5 83%,$bg_grad6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bg_grad1', endColorstr='$bg_grad6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    padding: 0;
+    font-family: sans-serif;
+
+    min-height: 100%;
+}
+
+body {
+    background-color: transparent;
+    color: $text_colour;
+}
+
+.footer {
+    margin-top: 2em;
+    border-top: 1px solid #bfbfbf;
+    padding-top: 1em;
+}
+
+.text-muted {
+    color: #c8c8c8;
+}
+
+body > div.container {
+    padding: 0.5em;
+    border-radius: 2em 2em 0 0;
+    border: 1px solid white;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.15);
+
+    background: -moz-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 21%, rgba(0,0,0,0.4) 77%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(21%,rgba(0,0,0,0.4)), color-stop(77%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.4) 21%,rgba(0,0,0,0.4) 77%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.4) 21%,rgba(0,0,0,0.4) 77%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.4) 21%,rgba(0,0,0,0.4) 77%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(135deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.4) 21%,rgba(0,0,0,0.4) 77%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@media (min-width: 768px) {
+    body > div.container { border-width: 3px; }
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+    color: #50b060;
+    border-radius: 1.5em 1.5em 0.5em 0.5em;
+}
+
+.navbar-brand {
+    font-size: 160%;
+    font-family: Soundabout, sans-serif;
+    text-shadow: 0 0 2px black,
+                 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.25);
+
+    color: #50b060 !important;
+}
+
+
+.navbar-brand:hover {
+    color: #8133f0 !important;
+    background-color: #5B027A;
+}
+
+.navbar-nav a {
+    padding: 0.7em 0.4em !important;
+    margin: 0.2em 0.4em;
+
+    font-family: Ubuntu,sans-serif;
+
+    color: white !important;
+    background-color: #309040;
+    text-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.25);
+
+    border: 1px solid #4a5;
+    border-radius: 0.25em;
+
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5) inset;
+}
+
+
+.navbar-nav li.active a {
+    border-color: #60d070;
+    text-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.8);
+    box-shadow: none;
+    background-color: transparent !important;
+}
+
+
+/* ------ start of Soundabout "sticker" -------------- */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+.soundabout_logo {
+    font-size: 4pt;
+    cursor: default;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .soundabout_logo { font-size: 10pt; }
+    .navbar-nav a {
+        font-size: 88%;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .soundabout_logo { font-size: 15pt; }
+    .navbar-nav a {
+        border-width: 2px;
+        margin: 0.2em 0.4em;
+        font-size: 100%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .soundabout_logo { font-size: 22pt; }
+}
+
+.soundabout_logo h1 {
+    font-size: 5em;
+    font-family: Soundabout, sans-serif;
+    text-shadow:
+        0 0 2px black,
+        0.05em 0.05em 0.5em rgba(0, 0, 0, 0.5)
+    ;
+    margin: 0 auto;
+    padding: 0 0.3em;
+}
+
+.soundabout_logo h1 span.S {
+    font-size: 150%;
+}
+
+.soundabout_logo {
+    color: #40d469 !important;
+    transition: opacity 0.15s linear;
+}
+.soundabout_logo:hover {
+    transition: opacity 0.3s linear;
+    opacity: 0.2;
+}
+
+.soundabout_logo a {
+    text-decoration: none;
+}
+
+.soundabout_logo a.email {
+    position: absolute;
+    top: 0;
+    left: 23em;
+    width: 100%;
+
+    color: #ddd !important;
+}
+
+.soundabout_logo .subcontainer {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+.soundabout_logo span.the {
+    font-size: 40%;
+    display: block;
+    position: absolute;
+    left: 2.5em;
+    top: -0.6em;
+}
+/* ------ end of Soundabout "sticker" -------------- */
+
+/* ------ Jumbotrons --------------*/
+.jumbotron {
+    background: url(/static/img/header.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 200px;
+    position: relative;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.25);
+}
+
+body#optredens .jumbotron {
+    background: url(/static/img/header-camping-zeeburg.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+body#index .jumbotron {
+    background: url(/static/img/header-fietsenrek.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+body#boekingen .jumbotron {
+    background: url(/static/img/header-legezakken.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+body#links .jumbotron {
+    background: url(/static/img/header-kanos.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+body#optredens .jumbotron p {
+    position: absolute;
+    bottom: 0;
+    right: 2em;
+}
+
+@media (min-width: 480px) { .jumbotron { min-height: 250px; }}
+@media (min-width: 640px) { .jumbotron { min-height: 300px; }}
+@media (min-width: 768px) { .jumbotron { min-height: 350px; }}
+@media (min-width: 992px) { .jumbotron { min-height: 400px; }}
+
+@media (min-width: 400px) { body#index .jumbotron { min-height: 300px; }}
+@media (min-width: 480px) { body#index .jumbotron { min-height: 380px; }}
+@media (min-width: 640px) { body#index .jumbotron { min-height: 450px; }}
+@media (min-width: 768px) { body#index .jumbotron { min-height: 550px; }}
+@media (min-width: 992px) { body#index .jumbotron { min-height: 550px; }}
+
+body#muziek .jumbotron {
+    background-image: url(/static/img/header-kanos.jpg);
+    background-position: center top;
+}
+
+/* ------ Einde jumbotrons --------------*/
+
+h2 {
+    font-family: Soundabout, sans-serif;
+    border-bottom: 1px solid white;
+}
+
+h3 {
+    font-family: Soundabout, sans-serif;
+    border-bottom: 1px solid white;
+}
+
+a {
+    color: #a0d7ff;
+    text-decoration: none;
+}
+
+a:hover, a:focus { color: #e5ffed; }
+a:visited { color: #ccffd5; }
+
+.btn:hover, .btn:focus, .btn.focus, .btn:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+ul.socials {
+    padding-left: 0 !important;
+}
+.socials li {
+    display: inline-block;
+    padding: 0 0;
+    width: 23%;
+    text-align: center;
+}
+
+.socials img {
+    width: 48px;
+    height: auto;
+}
+
+.overons p {
+    text-align: justify;
+}
+
+ul.optredens {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+dl {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+dt {
+    float: left;
+    clear: both;
+    text-align: left;
+    font-weight: bold;
+    width: 35%;
+    padding-right: 1em;
+}
+
+dt, dt + dd {
+    margin-top: 0.75em;
+}
+
+dd {
+    width: 65%;
+    float: right;
+}
+
+dl + * {
+    clear: both;
+}
+
+.floatpusher {
+    clear: both !important;
+    height: 0;
+    width: 100%;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.newsitem {
+    margin-bottom: 1em;
+}
+
+.newsitem img, .newsitem iframe {
+    max-width: 100%;
+    max-height: 250px;
+    float: left;
+    margin-right: 1em;
+}
+
+@media (min-width: 480px) { .newsitem img, .newsitem iframe { max-height: 300px; }}
+@media (min-width: 640px) { .newsitem img, .newsitem iframe { max-height: 350px; }}
+
+.news-bottom {
+    color: #c3c3c3;
+    background-color: #5d9352;
+    padding-left: 0.5em;
+}
+
+.anderedingetjes {
+    margin-top: 1.5em;
+}
+.anderedingetjes div.blokje {
+    box-shadow: inset 0 0 1em white;
+    border-radius: 1em;
+    padding: 0.2em 2em;
+    min-height: 13em;
+}
+
+input[type='text'], input[type='email'] {
+    color: black;
+    background-color: white;
+}
+
+.error {
+    color: #fc9786;
+    font-weight: bold;
+}
+
+div.admintool h2 {
+    color: $admintool_text_colour;
+}
+p.admintool {
+    float: right;
+    color: $admintool_text_colour;
+    font-size: smaller;
+}
